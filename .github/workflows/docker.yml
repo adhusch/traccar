@@ -131,7 +131,9 @@ jobs:
           images: ghcr.io/${{ github.repository_owner }}/traccar
           tags: |
             type=raw,value=${{ inputs.version }}
+            type=raw,value=${{ inputs.version }}-alpine
             type=raw,value=latest
+            type=raw,value=alpine
           labels: |
             org.opencontainers.image.version=${{ inputs.version }}
       - uses: docker/build-push-action@v7
